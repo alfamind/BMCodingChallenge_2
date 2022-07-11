@@ -1,9 +1,112 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 992px;
+    padding: 0 0.75rem;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.searchLabel {
+    min-width: 135px;
+    display: flex;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    align-items: center;
+}
+ul.grid {
+    list-style-type: none;
+    padding-left: 0;
+}
+.gridItem {
+    padding: 0.5rem;
+}
+
+.tile {
+    border: 1px solid rgba(51, 65, 85, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    line-height: 1.25rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05),
+        0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 0;
+    transition: all 0.2s;
+}
+.tile:hover {
+    bottom: 3px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15),
+        0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.small {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.price {
+    font-size: 1.5rem;
+}
+
+.btn {
+    border: 0;
+    padding: 10px 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btnPrimary {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+.btnReset {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+@media (min-width: 687px) {
+    #searchInput {
+        margin-right: 10px;
+        margin-left: 10px;
+        padding: 0 0.75rem;
+    }
+    .flexRow {
+        flex-direction: row;
+    }
+    .btnReset {
+        margin-left: 10px;
+    }
 }
